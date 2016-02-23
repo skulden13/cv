@@ -1,0 +1,25 @@
+@import 'bootstrap-custom/bootstrap-custom.scss';
+/* 
+@import '../../../node_modules/font-awesome/scss/font-awesome.scss';
+*/
+
+@import 'header-and-footer.scss';
+@import 'content.scss';
+
+body {
+  font: $font-size-base $font-family-base;
+  line-height: $line-height-base;
+  background: $yellow;
+}
+
+.no-link {
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.block {
+  display: block;
+}

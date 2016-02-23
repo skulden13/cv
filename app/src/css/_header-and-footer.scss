@@ -1,0 +1,152 @@
+// header and footer
+
+$header-bg-color: $dark-blue;
+$header-color: $white;
+
+$footer-bg-color: $header-bg-color;
+$footer-color: $header-color;
+
+#header,
+#footer {
+
+  background: $header-bg-color;
+}
+
+// header
+
+#header {
+
+}
+
+.logo {
+  overflow: hidden;
+  margin: $margin-sm 0;
+}
+
+.navbar-brand-container {
+  padding: 0;
+  height: auto;
+}
+
+.navbar-brand-image {
+  $size: 50px;
+  overflow: hidden;
+  @include square($size);
+  float: left;
+  margin: 0 $margin-md 0 0;
+  border-radius: $size / 2;
+  border: 3px solid $white;
+}
+
+.navbar-brand {
+  font: $font-size-base * 2 $font-custom-1;
+  line-height: 1em;
+  color: $white;
+  margin-top: $margin-sm / 2;
+  float: left;
+  padding: 0;
+  height: auto;
+  display: block;
+
+  small {
+    display: block;
+    font: $font-size-small $font-family-base;
+    line-height: $line-height-base;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $white;
+  }
+}
+
+// main menu
+#main-menu {
+  float: right;
+
+  .navbar-nav {
+    >li {
+      >a {
+        font: $font-size-large $font-custom-1;
+        line-height: 2.25em;
+        color: $orange;
+        // @include transition(all .5 ease);
+        transform-style: preserve-3d;
+
+        .active {
+          display: none;
+          background-color: $orange;
+          color: $brown;
+          // @include transition(all .3 ease);
+        }
+
+        .normal {
+          color: inherit;
+          background: inherit;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+          .active {
+            display: block;
+          }
+        }
+      }
+
+      &.active {
+        >a{
+          background-color: $orange;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.navbar-toggle {
+  $size: 70px;
+  margin: 1px;
+  font-size: $font-size-large;
+  line-height: $size - 2px;
+  padding: 0;
+  @include square($size - 2px);
+  color: $white;
+  // border: 1px solid $orange;
+  border-radius: 0;
+}
+
+// footer
+#footer {
+  color: $white;
+
+  .navbar-brand {
+    font-size: $font-size-base * 1.5;
+  }
+}
+
+.follow-block {
+  span {
+    font: $font-size-base $font-family-base;
+    line-height: 1.2em;
+    float: left;
+    margin: $margin-sm 0; 
+  }
+}
+
+.follow {
+  list-style: none;
+  overflow: hidden;
+  margin: $margin-sm 0;
+
+  >li {
+    float: left;
+    margin-left: $margin-sm;
+
+    >a {
+      color: $white;  
+      font-size: $font-size-large * 1.5;
+    }
+  }
+}
